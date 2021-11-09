@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples.NewFeatures._6
+﻿namespace NetCoreExamples.NewFeatures.CS_6
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,6 @@
     {
         public void Run()
         {
-
             Fighter fighter = new Fighter("Shinobi");
             IEnumerable<string> fighterStatus = FighterStatus.AllStatus;
             Console.WriteLine(string.Join(" ", fighterStatus));

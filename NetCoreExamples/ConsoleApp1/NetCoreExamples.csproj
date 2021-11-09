@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFeatures\CS_6\01_ReadOnlyAutoproperties.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Examples\" />
-    <Folder Include="NewFeatures\" />
   </ItemGroup>
 
 </Project>

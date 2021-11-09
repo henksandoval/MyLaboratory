@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples.NewFeatures._6
+﻿namespace NetCoreExamples.NewFeatures.CS_6
 {
     using System;
 
@@ -30,14 +30,9 @@
             string message = string.Empty;
 
             if (customer == null || customer.Address == null)
-            {
                 message += "NoStreet";
-            }
             else
-            {
                 message += customer.Address.Street;
-            }
-
 
             string customerName = customer?.Name;
             string street = customer?.Address?.Street ?? "NoStreet";

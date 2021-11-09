@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples.NewFeatures._6
+﻿namespace NetCoreExamples.NewFeatures.CS_6
 {
     using System;
     using System.Threading.Tasks;

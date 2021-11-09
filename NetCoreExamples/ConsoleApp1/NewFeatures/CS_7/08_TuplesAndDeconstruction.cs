@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples.NewFeatures._7
+﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
     using System;
     using System.Collections.Generic;

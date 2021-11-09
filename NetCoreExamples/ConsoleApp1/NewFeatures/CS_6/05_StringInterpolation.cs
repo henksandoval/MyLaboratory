@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples.NewFeatures._6
+﻿namespace NetCoreExamples.NewFeatures.CS_6
 {
     using System;
     using System.Collections.Generic;
@@ -13,6 +13,9 @@
 
             string multiPlyResult = InterpolationTests.Multiply(5, 2);
             Console.WriteLine(multiPlyResult);
+
+            string formatTextExample = InterpolationTests.FormatExample();
+            Console.WriteLine(formatTextExample);
         }
     }
     public class InterpolationTests
@@ -28,5 +31,13 @@
 
             return $"{number} multiplied by {multiplyBy} is {multiplier(number)}";
         }
+
+        public static string FormatExample()
+		{
+            DateTime currentDate = DateTime.Now;
+            Decimal somethingDecimal = 13.47212m;
+
+            return $"Date formatted: {currentDate:F} or {currentDate:d} Decimal formatted: {somethingDecimal:N1} or {somethingDecimal:N3}";
+		}
     }
 }
