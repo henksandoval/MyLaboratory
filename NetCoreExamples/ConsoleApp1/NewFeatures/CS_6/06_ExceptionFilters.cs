@@ -3,8 +3,9 @@
 	using System;
 	using System.Net.Http;
 	using System.Threading.Tasks;
+	using NetCoreExamples.RunnableInterfaces;
 
-	public class ExceptionFilters : IRunnable
+	public class ExceptionFilters : IRunnableCS_6
 	{
 		public void Run()
 		{

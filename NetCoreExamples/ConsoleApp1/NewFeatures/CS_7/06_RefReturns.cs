@@ -1,8 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
     using System;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class RefReturns : IRunnable
+	public class RefReturns : IRunnableCS_7
     {
         public ref int FindRefInArray(int number, int[] arrayNumber)
         {

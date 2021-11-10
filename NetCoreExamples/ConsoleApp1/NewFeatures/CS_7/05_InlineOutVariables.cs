@@ -2,8 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class InlineOutVariables : IRunnable
+	public class InlineOutVariables : IRunnableCS_7
     {
         private readonly Dictionary<int, string> People = new Dictionary<int, string>
         {

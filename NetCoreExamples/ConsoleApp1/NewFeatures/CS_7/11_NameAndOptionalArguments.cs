@@ -1,8 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
 	using System;
+	using NetCoreExamples.RunnableInterfaces;
 
-	public class NameAndOptionalArguments : IRunnable
+	public class NameAndOptionalArguments : IRunnableCS_7
 	{
 		public void Run()
 		{

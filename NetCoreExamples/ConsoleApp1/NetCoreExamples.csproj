@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Examples\" />
+    <Folder Include="Threading\" />
   </ItemGroup>
 
 </Project>

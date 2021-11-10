@@ -1,8 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_6
 {
     using System;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class NullConditionalOperator : IRunnable
+	public class NullConditionalOperator : IRunnableCS_6
     {
         public void Run()
         {

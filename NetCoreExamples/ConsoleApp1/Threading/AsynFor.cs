@@ -1,11 +1,12 @@
-﻿namespace NetCoreExamples.Examples
+﻿namespace NetCoreExamples.Threading
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class AsynFor : IRunnable
+	public class AsynFor : IRunnableThreading
     {
         public void Run()
         {

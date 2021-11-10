@@ -4,9 +4,10 @@
 /// </summary>
 namespace NetCoreExamples.NewFeatures.CS_6
 {
-    using static NetCoreExamples.NewFeatures.CS_6.Greeter;
+	using NetCoreExamples.RunnableInterfaces;
+	using static NetCoreExamples.NewFeatures.CS_6.Greeter;
 
-    public class UsingStatic : IRunnable
+    public class UsingStatic : IRunnableCS_6
     {
         public void Run()
         {

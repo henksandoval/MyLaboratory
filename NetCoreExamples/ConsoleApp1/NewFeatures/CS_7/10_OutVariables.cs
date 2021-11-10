@@ -5,8 +5,9 @@
 	using System.Linq;
 	using System.Text;
 	using System.Threading.Tasks;
+	using NetCoreExamples.RunnableInterfaces;
 
-	public class OutVariables : IRunnable
+	public class OutVariables : IRunnableCS_7
 	{
 		public void Run()
 		{

@@ -1,8 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
 	using System;
+	using NetCoreExamples.RunnableInterfaces;
 
-	public class SwitchPatterMatching3 : IRunnable
+	public class SwitchPatterMatching3 : IRunnableCS_7
 	{
 		private enum TypeJutsu
 		{

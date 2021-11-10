@@ -2,8 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class TuplesAndDeconstructions : IRunnable
+	public class TuplesAndDeconstructions : IRunnableCS_7
     {
         public void Run()
         {

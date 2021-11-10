@@ -2,8 +2,9 @@
 {
     using System.Net.Http;
     using System.Threading.Tasks;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class AsyncReturnTypes : IRunnable
+	public class AsyncReturnTypes : IRunnableCS_7
     {
         public static string CachedData = string.Empty;
         public void Run()

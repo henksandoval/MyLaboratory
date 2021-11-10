@@ -1,7 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
     using System;
-    public class ExpressionBodiedMembers : IRunnable
+	using NetCoreExamples.RunnableInterfaces;
+
+	public class ExpressionBodiedMembers : IRunnableCS_7
     {
         public void Run()
         {

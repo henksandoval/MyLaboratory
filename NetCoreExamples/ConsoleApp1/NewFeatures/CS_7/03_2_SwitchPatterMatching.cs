@@ -1,8 +1,9 @@
 ﻿namespace NetCoreExamples.NewFeatures.CS_7
 {
     using System;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class SwitchPatterMatching2 : IRunnable
+	public class SwitchPatterMatching2 : IRunnableCS_7
     {
         public void Run()
         {

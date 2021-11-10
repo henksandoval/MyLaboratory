@@ -2,8 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class NameOfExpression : IRunnable
+	public class NameOfExpression : IRunnableCS_6
     {
         public void Run()
         {

@@ -2,8 +2,9 @@
 {
     using System;
     using System.Threading.Tasks;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class AwaitInCatchAndFinally : IRunnable
+	public class AwaitInCatchAndFinally : IRunnableCS_6
     {
         public void Run()
         {

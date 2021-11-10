@@ -1,4 +1,4 @@
-﻿namespace NetCoreExamples
+﻿namespace NetCoreExamples.RunnableInterfaces
 {
     public interface IRunnable
     {

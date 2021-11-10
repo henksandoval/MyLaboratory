@@ -2,8 +2,9 @@
 {
     using System;
     using System.Linq;
+	using NetCoreExamples.RunnableInterfaces;
 
-    public class LocalFunctions : IRunnable
+	public class LocalFunctions : IRunnableCS_7
     {
         public void Run()
         {
