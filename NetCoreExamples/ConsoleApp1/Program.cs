@@ -15,11 +15,11 @@
 		}
 
 		private static void ExecuteRunnables()
-		{			
+		{
 			typeof(Program).Assembly.ExportedTypes
-				.Where(x => typeof(IRunnableThreading).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+				.Where(x => typeof(IRunnableExamples).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
 				.Select(Activator.CreateInstance)
-				.Cast<IRunnableThreading>()
+				.Cast<IRunnableExamples>()
 				.ToList()
 				.ForEach(initializer => initializer.Run());
 		}
