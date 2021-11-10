@@ -23,12 +23,14 @@
 
 		public delegate bool FilterDelegate(Person person);
 
+		public delegate Person GetPerson(object sender, EventArgs args);
+
 		public void Run()
 		{
-			ExecuteActionByType();
+			FirstExampleUseDelegates();
 		}
 
-		private void ExecuteActionByType()
+		private void FirstExampleUseDelegates()
 		{
 			var people = new List<Person>
 			{
@@ -41,6 +43,17 @@
 			DisplayPeople("Childrens", people, FilterPeople.IsChild);
 			DisplayPeople("Adults", people, FilterPeople.IsAdult);
 			DisplayPeople("Seniors", people, FilterPeople.IsSenior);
+
+			FilterDelegate notFilterDelegate = delegate (Person person)
+			{
+				return true;
+			};
+			DisplayPeople("All", people, notFilterDelegate);
+
+			FilterDelegate exampleWithLambdaExpression = p => p.Age > 0;
+			DisplayPeople("All", people, exampleWithLambdaExpression);
+
+			DisplayPeople("Nobody", people, p => p.Age < 999);
 		}
 
 		private void DisplayPeople(string title, List<Person> people, FilterDelegate filter)
