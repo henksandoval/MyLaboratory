@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCoreExamples", "NetCoreExamples", "{5127E1E2-C4FB-4E83-91B6-9B15FC414E0E}"
 EndProject
@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{DE9C0B1E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{4AED9F9D-5115-48A3-BA22-33A7BA6CC63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreExamples", "NetCoreExamples\ConsoleApp1\NetCoreExamples.csproj", "{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreExamples", "NetCoreExamples\ConsoleApp1\NetCoreExamples.csproj", "{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Principles.SRP.Refactor", "SOLID\1-UnaSolaRazon\refactor\Principles.SRP.Refactor\Principles.SRP.Refactor.csproj", "{37F837DE-A200-4A09-8446-E3593766E9F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F837DE-A200-4A09-8446-E3593766E9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F837DE-A200-4A09-8446-E3593766E9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F837DE-A200-4A09-8446-E3593766E9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F837DE-A200-4A09-8446-E3593766E9F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +39,7 @@ Global
 		{DE9C0B1E-89C1-4410-8930-8DD9C10A6942} = {9B9E49C0-314A-4FB2-AABB-4875149AD127}
 		{4AED9F9D-5115-48A3-BA22-33A7BA6CC63F} = {9B9E49C0-314A-4FB2-AABB-4875149AD127}
 		{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68} = {5127E1E2-C4FB-4E83-91B6-9B15FC414E0E}
+		{37F837DE-A200-4A09-8446-E3593766E9F4} = {DE9C0B1E-89C1-4410-8930-8DD9C10A6942}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83F9BECE-7FA8-48CF-B7B4-EBB013837CAA}
