@@ -2,11 +2,14 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.IO;
+	using System.Linq;
+	using System.Text.RegularExpressions;
 	using Microsoft.Data.Sqlite;
 
 	internal class Service : IService, IDisposable
 	{
-		private SqliteConnection masterConnection;
+		private SqliteConnection sqliteDb;
 
 		public Service()
 		{
@@ -29,7 +32,7 @@
 				return false;
 			}
 
-			var insertCommand = masterConnection.CreateCommand();
+			var insertCommand = sqliteDb.CreateCommand();
 			insertCommand.CommandText = "INSERT INTO Product ( ProductId, Name, Price ) " +
 										"VALUES ( $id, $name, $price )";
 			insertCommand.Parameters.AddWithValue("$id", newProduct.ProductId);
@@ -44,7 +47,7 @@
 		{
 			var products = new List<Product>();
 
-			var selectCommand = masterConnection.CreateCommand();
+			var selectCommand = sqliteDb.CreateCommand();
 			selectCommand.CommandText = "SELECT ProductId, Name, Price FROM Product";
 			using (var reader = selectCommand.ExecuteReader())
 			{
@@ -65,11 +68,11 @@
 
 		private void InitDatabase()
 		{
-			const string connectionString = "Data Source=SRP.db;Mode=Memory;Cache=Shared";
-			masterConnection = new SqliteConnection(connectionString);
-			masterConnection.Open();
+			const string connectionString = @"Data Source=SRP.db;Mode=Memory;Cache=Shared";
+			sqliteDb = new SqliteConnection(connectionString);
+			sqliteDb.Open();
 
-			var createCommand = masterConnection.CreateCommand();
+			var createCommand = sqliteDb.CreateCommand();
 			createCommand.CommandText =
 			@"
                 CREATE TABLE Product (
@@ -90,10 +93,25 @@
 		protected virtual void Dispose(bool disposing)
 		{
 			if (disposing)
-				if (masterConnection != null)
+				switch (sqliteDb)
 				{
-					masterConnection.Dispose();
-					masterConnection = null;
+					case var db when db == null:
+						break;
+					case var db when db.ConnectionString.Contains("Memory"):
+						sqliteDb.Dispose();
+						sqliteDb = null;
+						break;
+					case var db when !db.ConnectionString.Contains("Memory"):
+						sqliteDb.Close();
+						db.Close();
+						sqliteDb.Dispose();
+						db.Dispose();
+						GC.Collect();
+						GC.WaitForPendingFinalizers();
+						var dbPath = $"{Directory.GetCurrentDirectory()}\\SRP.db";
+						var dbFile = new FileInfo(dbPath);
+						dbFile.Delete();
+						break;
 				}
 		}
 	}

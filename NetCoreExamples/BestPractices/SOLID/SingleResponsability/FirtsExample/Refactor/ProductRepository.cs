@@ -2,6 +2,7 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.IO;
 	using Microsoft.Data.Sqlite;
 
 	internal class ProductRepository : IDisposable
@@ -51,7 +52,7 @@
 		private void InitDatabase()
 		{
 
-			const string connectionString = "DataSource=Example;Mode=Memory;Cache=Shared";
+			const string connectionString = @"DataSource=C:\SRP.db;Mode=Memory;Cache=Shared";
 			sqliteDb = new SqliteConnection(connectionString);
 			sqliteDb.Open();
 
@@ -76,10 +77,25 @@
 		protected virtual void Dispose(bool disposing)
 		{
 			if (disposing)
-				if (sqliteDb != null)
+				switch (sqliteDb)
 				{
-					sqliteDb.Dispose();
-					sqliteDb = null;
+					case var db when db == null:
+						break;
+					case var db when db.ConnectionString.Contains("Memory"):
+						sqliteDb.Dispose();
+						sqliteDb = null;
+						break;
+					case var db when !db.ConnectionString.Contains("Memory"):
+						sqliteDb.Close();
+						db.Close();
+						sqliteDb.Dispose();
+						db.Dispose();
+						GC.Collect();
+						GC.WaitForPendingFinalizers();
+						var dbPath = $"{Directory.GetCurrentDirectory()}\\SRP.db";
+						var dbFile = new FileInfo(dbPath);
+						dbFile.Delete();
+						break;
 				}
 		}
 	}

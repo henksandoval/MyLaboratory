@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{DE9C0B1E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{4AED9F9D-5115-48A3-BA22-33A7BA6CC63F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreExamples", "NetCoreExamples\ConsoleApp1\NetCoreExamples.csproj", "{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreExamples", "NetCoreExamples\NetCoreExamples.csproj", "{39EFDCA5-3081-4EA1-B9FB-B662CDEC0A68}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Principles.SRP.Refactor", "SOLID\1-UnaSolaRazon\refactor\Principles.SRP.Refactor\Principles.SRP.Refactor.csproj", "{37F837DE-A200-4A09-8446-E3593766E9F4}"
 EndProject
