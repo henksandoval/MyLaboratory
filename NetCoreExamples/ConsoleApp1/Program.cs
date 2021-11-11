@@ -16,12 +16,13 @@
 
 		private static void ExecuteRunnables()
 		{
-			typeof(Program).Assembly.ExportedTypes
-				.Where(x => typeof(IRunnableExamples).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+			var runnables = typeof(Program).Assembly.ExportedTypes
+				.Where(x => typeof(IRunnableSolid).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
 				.Select(Activator.CreateInstance)
-				.Cast<IRunnableExamples>()
-				.ToList()
-				.ForEach(initializer => initializer.Run());
+				.Cast<IRunnableSolid>()
+				.ToList();
+
+			runnables.ForEach(initializer => initializer.Run());
 		}
 	}
 }
