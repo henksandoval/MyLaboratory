@@ -1,6 +1,6 @@
 ﻿namespace NetCoreExamples.RunnableInterfaces
 {
-	public interface IRunnableCS_6 : IRunnable
+	public interface IRunnableCS_8 : IRunnable
 	{
 	}
 }
