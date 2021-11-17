@@ -1,6 +1,6 @@
 ﻿namespace NetCoreExamples.RunnableInterfaces
 {
-	internal interface IRunnableSolid : IRunnable
+	public interface IRunnableSolid : IRunnable
 	{
 	}
 }
