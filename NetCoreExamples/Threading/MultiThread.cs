@@ -4,7 +4,7 @@
 	using System.Threading;
 	using NetCoreExamples.RunnableInterfaces;
 
-	public class MultiThread : IRunnableThreading
+	public class MultiThread
 	{
 		private static int count = 0;
 		private static bool execute = true;
@@ -17,12 +17,8 @@
 			thread01.Start();
 			thread02.Start();
 
-
 			while (execute)
-			{
-				if (count > 100) execute = false;
-			}
-
+				if (count > 20) execute = false;
 
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("Finish run on Multithread");
@@ -35,7 +31,7 @@
 			{
 				count++;
 				Console.WriteLine("-------");
-				Console.WriteLine("Thread id --> {0}", Thread.CurrentThread.ManagedThreadId);
+				Console.WriteLine("Thread id --> {0}", Environment.CurrentManagedThreadId);
 				Console.WriteLine("Count --> {0}", count);
 
 				Thread.Sleep(300);
