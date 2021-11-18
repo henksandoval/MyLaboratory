@@ -1,34 +1,32 @@
 ﻿namespace NetCoreExamples
 {
 	using System;
-	using System.Collections.Generic;
 	using System.Linq;
-	using System.Reflection;
 	using NetCoreExamples.RunnableInterfaces;
 
 	internal class Program
 	{
 		private static void Main(string[] args)
 		{
-			ExecuteRunnables();
+			ExecuteRunnables(typeof(IRunnable));
 			Console.ReadKey();
 		}
 
-		private static void ExecuteRunnables()
+		private static void ExecuteRunnables(Type typeInterfaceToRun)
 		{
-			var runnables = typeof(Program).Assembly.ExportedTypes
-				.Where(x => typeof(IRunnableSolid).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+			var instances = typeof(Program).Assembly.ExportedTypes
+				.Where(x => typeInterfaceToRun.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
 				.Select(Activator.CreateInstance)
-				.Cast<IRunnableSolid>()
 				.ToList();
 
-			runnables.ForEach(initializer =>
+			instances.ForEach(instance =>
 			{
 				Console.BackgroundColor = ConsoleColor.DarkBlue;
 				Console.ForegroundColor = ConsoleColor.White;
-				Console.WriteLine($"Demostration of: <------------{initializer.GetType()}--------------->");
+				Console.WriteLine($"Demostration of: <------------{instance.GetType()}--------------->");
 				Console.ResetColor();
-				initializer.Run();
+				var specificClass = (IRunnable)instance;
+				specificClass.Run();
 				Console.WriteLine();
 			});
 		}
