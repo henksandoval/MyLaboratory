@@ -3,7 +3,7 @@
 	using System;
 	using NetCoreExamples.RunnableInterfaces;
 
-	public class PatternMatching_SwitchExpression : IRunnableCS_8
+	public class PatternMatching_SwitchExpressionPattern : IRunnableCS_8
 	{
 		public void Run()
 		{

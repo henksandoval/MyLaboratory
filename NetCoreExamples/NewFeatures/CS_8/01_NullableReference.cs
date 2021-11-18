@@ -5,6 +5,7 @@
 #nullable enable
 namespace NetCoreExamples.NewFeatures.CS_8
 {
+	using System;
 	using System.Collections.Generic;
 	using NetCoreExamples.RunnableInterfaces;
 
@@ -13,6 +14,7 @@ namespace NetCoreExamples.NewFeatures.CS_8
 		public void Run()
 		{
 			var blog = new BlogPost(null);
+			Console.WriteLine("Look at the class file by see how work");
 			//Validate how the compiler null literals on variables
 		}
 	}
