@@ -11,8 +11,6 @@
 
   <ItemGroup>
     <Folder Include="BestPractices\SOLID\2_OpenClosed\FirstExample\Refactor\Delivery\" />
-    <Folder Include="BestPractices\SOLID\3_LiskovSustitution\Symptom\" />
-    <Folder Include="BestPractices\SOLID\3_LiskovSustitution\Refactor\" />
     <Folder Include="BestPractices\SOLID\4_InterfaceSegregation\Symptom\" />
     <Folder Include="BestPractices\SOLID\4_InterfaceSegregation\Refactor\" />
     <Folder Include="BestPractices\SOLID\5_DependencyInversion\Symptom\" />

@@ -9,7 +9,16 @@
 	{
 		public void Run()
 		{
+			Console.BackgroundColor = ConsoleColor.DarkRed;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine("Bad example");
+			Console.ResetColor();
 			Implementation(new BadStore());
+
+			Console.BackgroundColor = ConsoleColor.DarkGreen;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine("Good example");
+			Console.ResetColor();
 			Implementation(new GoodStore());
 		}
 

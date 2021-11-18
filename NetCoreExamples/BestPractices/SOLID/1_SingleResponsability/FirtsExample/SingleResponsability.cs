@@ -9,10 +9,18 @@
 	{
 		public void Run()
 		{
+			Console.BackgroundColor = ConsoleColor.DarkRed;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine("Bad example");
+			Console.ResetColor();
 			var exampleWithBadService = new BadService();
 			Implementation(exampleWithBadService);
 			exampleWithBadService.Dispose();
 
+			Console.BackgroundColor = ConsoleColor.DarkGreen;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine("Good example");
+			Console.ResetColor();
 			var exampleWithGoodService = new GoodService();
 			Implementation(exampleWithGoodService);
 			exampleWithGoodService.Dispose();
