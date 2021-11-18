@@ -42,11 +42,8 @@
 		public class Student
 		{
 			public string FirstName { get; set; }
-
 			public string LastName { get; set; }
-
 			public Teacher HomeRoomTeacher { get; set; }
-
 			public int GradeLevel { get; set; }
 
 			public Student(string firstName, string lastName, Teacher homeRoomTeacher, int gradeLevel)
@@ -69,11 +66,8 @@
 		public class Teacher
 		{
 			public string FirstName { get; set; }
-
 			public string LastName { get; set; }
-
 			public string Subject { get; set; }
-
 			public Teacher(string firstName, string lastName, string subject)
 			{
 				FirstName = firstName;
