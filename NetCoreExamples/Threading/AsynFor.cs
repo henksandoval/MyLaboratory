@@ -5,17 +5,15 @@
     using System.Linq;
     using System.Threading.Tasks;
 	using NetCoreExamples.RunnableInterfaces;
+    using TaskExtensions = Extensions.TaskExtensions;
 
-	public class AsynFor : IRunnableThreading
+    public class AsynFor : IRunnableThreading
     {
         public void Run()
         {
-            Task.Run(async () =>
-            {
-                Console.WriteLine("Observed how all the processes with add numbers are slower than with pair numbers");
-                await AsynExample.MainAsync();
-            });
-        }
+            Console.WriteLine("Observed how all the processes with add numbers are slower than with pair numbers");
+			TaskExtensions.ForceAsync(AsynExample.MainAsync).Wait();
+		}
 
         public static class AsynExample
         {

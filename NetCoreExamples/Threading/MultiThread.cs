@@ -4,7 +4,7 @@
 	using System.Threading;
 	using NetCoreExamples.RunnableInterfaces;
 
-	public class MultiThread
+	public class MultiThread : IRunnableThreading
 	{
 		private static int count = 0;
 		private static bool execute = true;
