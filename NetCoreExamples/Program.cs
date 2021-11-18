@@ -17,9 +17,9 @@
 		private static void ExecuteRunnables()
 		{
 			var runnables = typeof(Program).Assembly.ExportedTypes
-				.Where(x => typeof(IRunnableThreading).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+				.Where(x => typeof(IRunnableCS_8).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
 				.Select(Activator.CreateInstance)
-				.Cast<IRunnableThreading>()
+				.Cast<IRunnableCS_8>()
 				.ToList();
 
 			runnables.ForEach(initializer =>
