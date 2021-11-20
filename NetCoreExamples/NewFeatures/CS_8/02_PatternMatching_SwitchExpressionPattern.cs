@@ -3,6 +3,11 @@
 	using System;
 	using NetCoreExamples.RunnableInterfaces;
 
+	/// <summary>
+	/// Interesting example
+	/// <see cref="https://alexatnet.com/cs8-switch-statement/"/>
+	/// <seealso cref="https://csharp.christiannagel.com/2019/08/14/moving-from-the-switch-statement-to-switch-expressions-c-8/"/>
+	/// </summary>
 	public class PatternMatching_SwitchExpressionPattern : IRunnableCS_8
 	{
 		public void Run()

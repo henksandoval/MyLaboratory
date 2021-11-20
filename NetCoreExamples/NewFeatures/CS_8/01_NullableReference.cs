@@ -1,14 +1,14 @@
-﻿/// <summary>
-/// To enable per file, you can use #nullable enable where you want to enable the functionality and #nullable disable where you want to disable it.
-/// <see cref="https://www.meziantou.net/csharp-8-nullable-reference-types.htm"/>
-/// </summary>
-#nullable enable
-namespace NetCoreExamples.NewFeatures.CS_8
+﻿namespace NetCoreExamples.NewFeatures.CS_8
 {
 	using System;
 	using System.Collections.Generic;
 	using NetCoreExamples.RunnableInterfaces;
 
+	/// <summary>
+	/// To enable per file, you can use #nullable enable where you want to enable the functionality and #nullable disable where you want to disable it.
+	/// <see cref="https://www.meziantou.net/csharp-8-nullable-reference-types.htm"/>
+	/// </summary>
+	#nullable enable
 	public class NullableReference : IRunnableCS_8
 	{
 		public void Run()

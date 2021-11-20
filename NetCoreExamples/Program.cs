@@ -8,7 +8,7 @@
 	{
 		private static void Main(string[] args)
 		{
-			ExecuteRunnables(typeof(IRunnable));
+			ExecuteRunnables(typeof(IRunnableCS_8));
 			Console.ReadKey();
 		}
 
