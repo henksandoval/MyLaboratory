@@ -1,7 +1,10 @@
 {
   "ID": "589",
   "title": "Dise\u00f1o \u00c1gil con TDD",
-  "author": "Carlos Bl\u00e9 Jurados y autores",
+  "author": {
+    "firstName": "Carlos",
+    "lastName": "Bueno"
+  },
   "content": "",
   "content_short": "Dedicas una gran parte de tu tiempo de desarrollo...",
   "publisher": "www.iExpertos.com",

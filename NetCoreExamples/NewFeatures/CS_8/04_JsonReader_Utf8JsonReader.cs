@@ -7,10 +7,7 @@
 
 	public class JsonReader_Utf8JsonReader : IRunnableCS_8
 	{
-		public void Run()
-		{
-			ExampleUseUTF8JsonReader();
-		}
+		public void Run() => ExampleUseUTF8JsonReader();
 
 		public void ExampleUseUTF8JsonReader()
 		{
