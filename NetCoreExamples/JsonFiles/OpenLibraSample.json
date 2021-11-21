@@ -3,7 +3,8 @@
   "title": "Dise\u00f1o \u00c1gil con TDD",
   "author": {
     "firstName": "Carlos",
-    "lastName": "Bueno"
+    "lastName": "Bueno",
+    "fullName": "Carlos Bueno"
   },
   "content": "",
   "content_short": "Dedicas una gran parte de tu tiempo de desarrollo...",
